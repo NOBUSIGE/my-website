@@ -1,0 +1,560 @@
+/* 全体設定 */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #ffffff; /* 元画像に合わせて背景を完全に白に */
+    font-family: 'Noto Sans JP', sans-serif;
+    color: #000000;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+/* 画面全体のコンテナ */
+.main-app-container {
+    width: 100vw;
+    height: 100vh;
+    background-color: #ffffff;
+    position: relative; /* 子要素の絶対配置の基準にする */
+    overflow: hidden;
+}
+
+/* 上部ヘッダーバー */
+.main-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #dddddd; /* 元画像のグレー */
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 2px solid #000000;
+    z-index: 100; /* スクロールコンテンツ（z-index 1）の上に表示 */
+    pointer-events: none; /* 下のスクロールなどの操作を邪魔しないようにする */
+}
+
+.main-header h1 {
+    font-size: 80px; /* 文字サイズを大きく */
+    font-weight: 900;
+    letter-spacing: 12px; /* 文字間隔を広げる */
+    color: #000000;
+    pointer-events: auto; /* テキスト部分はクリック可能に */
+}
+
+/* スクロール可能なビューポート */
+.viewport-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden; /* 横スクロールは完全排除 */
+    overflow-y: auto;   /* 縦スクロールのみ許可 */
+    background-color: #ffffff;
+    /* ヘッダー高さ 120px + 元のパディング 40px = 160px。スクロール時に最上部（ヘッダーの上）までコンテンツが突き抜けるようにする */
+    padding: 160px 30px 40px 30px; 
+}
+
+/* スクロールバーのカスタマイズ (上品で細身に) */
+.viewport-wrapper::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+.viewport-wrapper::-webkit-scrollbar-track {
+    background: #ffffff;
+}
+.viewport-wrapper::-webkit-scrollbar-thumb {
+    background: #cccccc;
+    border-radius: 4px;
+}
+.viewport-wrapper::-webkit-scrollbar-thumb:hover {
+    background: #999999;
+}
+
+/* 履歴書両面を並べるコンテナ */
+.resume-container {
+    display: flex;
+    gap: 40px; /* 左右の用紙の間の隙間を縮小 */
+    justify-content: center;
+    max-width: 1240px; /* 1440px内に余裕で収まるサイズ */
+    margin: 0 auto 80px auto; /* 複数の履歴書が並ぶため、下に80pxの余白を空ける */
+}
+
+/* 履歴書 用紙共通（左右半分） */
+.resume-sheet {
+    width: 590px; /* 用紙の横幅を620pxから590pxに縮小 */
+    background-color: #ffffff;
+    flex-shrink: 0;
+}
+
+/* 共通フォント設定 */
+.font-serif {
+    font-family: 'Noto Serif JP', serif;
+    font-weight: 500;
+}
+
+/* 左半分のヘッダー */
+.sheet-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 20px; /* 15pxから20pxに広げてタイトル・日付とテーブル枠線の被りを解消 */
+    width: 440px; /* テーブル幅に揃えて日付を左に寄せ、写真との被りを回避 */
+}
+
+.title-resume {
+    font-size: 28px;
+    font-weight: 900;
+    letter-spacing: 12px;
+    border-bottom: 2px solid #000000;
+    padding-bottom: 4px;
+    line-height: 1;
+}
+
+.current-date {
+    font-size: 12px;
+    font-weight: 700;
+    padding-bottom: 4px;
+}
+
+/* テーブルスタイル共通 */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 2px solid #000000; /* 外枠は太線 */
+    font-size: 11px;
+}
+
+th, td {
+    border: 1px solid #000000; /* 内枠は細線 */
+    padding: 6px;
+    vertical-align: middle;
+}
+
+/* ラベル列の基本設定 */
+.label-col {
+    background-color: #ffffff;
+    font-weight: 700;
+    text-align: center;
+    font-size: 10px;
+    width: 65px;
+    letter-spacing: 1px;
+}
+
+/* プロフィール・基本情報ブロック */
+.profile-block {
+    position: relative;
+    height: auto; /* テーブルの実際のレンダリング高さに自動追従させ、上下テーブルの境界線を完全に一致させる */
+    margin-bottom: -2px; /* 下の住所テーブルと枠線をぴったり重ねる */
+    width: 440px; /* テーブル幅 */
+}
+
+.info-table {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 0;
+}
+
+.info-table .ruby-label {
+    height: 25px; /* 高さを拡張して上下の枠線との文字被りを解消 (20pxから25pxに) */
+    font-size: 8px;
+    text-align: left;
+    vertical-align: top;
+    padding: 4px 0 0 6px;
+}
+
+.info-table .ruby-text {
+    font-size: 11px;
+    padding-left: 12px;
+    letter-spacing: 4px;
+}
+
+.info-table .name-label {
+    height: 65px; /* 高さを拡張して文字被りを解消 (60pxから65pxに) */
+    font-size: 11px;
+    letter-spacing: 4px;
+}
+
+.info-table .name-text {
+    font-size: 26px; /* 画像に合わせて文字サイズを大きく */
+    letter-spacing: 6px; /* 文字間を少し狭める */
+    text-align: center; /* 中央寄せ */
+    padding-left: 0;
+    font-weight: 700;
+    white-space: nowrap; /* 2行への折り返しを絶対に防ぐ */
+}
+
+.info-table .birth-text {
+    height: 45px; /* 高さを拡張して文字被りを解消 (40pxから45pxに) */
+    font-size: 14px; /* 画像に合わせて文字サイズを少し大きく */
+    text-align: center; /* 中央寄せ */
+    padding-left: 0;
+    white-space: nowrap; /* 2行への折り返しを絶対に防ぐ */
+}
+
+/* 性別欄 */
+.gender-col {
+    width: 60px; /* 性別セルの幅 */
+    height: 45px; /* 生年月日と同じ高さに明示的に設定 */
+    text-align: center;
+    padding: 2px;
+}
+
+.gender-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.gender-note {
+    font-size: 8px;
+    margin-bottom: 0px; /* 隙間を詰める */
+    width: 100%;
+    text-align: left;
+    padding-left: 6px;
+    line-height: 1; /* 行高さを詰めて枠線との被りを回避 */
+}
+
+.gender-options {
+    font-size: 12px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.gender-item {
+    display: inline-block;
+    position: relative;
+    padding: 2px;
+}
+
+/* 性別丸囲み */
+.gender-item.active {
+    border: 1.5px solid #000000;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    line-height: 19px;
+    text-align: center;
+}
+
+/* 写真枠 (独立して配置し、他の枠と離す) */
+.photo-box {
+    position: absolute;
+    top: -60px; /* テーブルの高さ拡張に合わせて写真をさらに上へ配置し、タイトルと高さを揃える (-50pxから-60pxに) */
+    left: 455px; /* テーブル幅 440px + 隙間 15px */
+    width: 135px; /* 横幅はそのまま */
+    height: 180px; /* 画像比率 縦40:横30 */
+    padding: 8px;
+    text-align: center;
+    border: 1.5px dashed #999999; /* 画像に合わせて薄い点線に */
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 200; /* ヘッダー（z-index 100）より前面に表示させ、スクロール時に突き抜けさせる */
+}
+
+.photo-text {
+    font-size: 9px;
+    line-height: 1.3;
+    color: #000000;
+}
+
+.photo-subtext {
+    display: block;
+    margin-top: 6px;
+    font-size: 7.5px;
+    text-align: left;
+    line-height: 1.2;
+}
+
+/* 住所・連絡先テーブル */
+.address-table {
+    margin-bottom: 15px; /* 下の学歴・職歴テーブルとの間に隙間を空ける */
+}
+
+.address-table tr {
+    height: 13px; /* ユーザーの指定に基づき、ふりがな行などのデフォルト高さを20pxからさらに7px下げて13pxに設定 */
+}
+
+.address-table .row-address {
+    height: 65px;
+}
+
+.address-table .ruby-label {
+    font-size: 8px;
+    text-align: left;
+    vertical-align: top;
+    padding: 1px 0 0 6px; /* 13pxの高さに収めるために上パディングを縮小 */
+}
+
+.address-table .ruby-text {
+    font-size: 11px;
+    padding-left: 10px;
+    letter-spacing: 2px;
+    line-height: 1; /* 13pxの高さに収めるために行高さを1に設定 */
+}
+
+.address-table .address-text {
+    font-size: 14px;
+    padding-left: 10px;
+    vertical-align: top;
+    padding-top: 6px;
+}
+
+.address-table .postal-code {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 4px;
+}
+
+.address-table .address-detail {
+    font-size: 20px; /* 住所文字を大きく */
+    font-weight: 700;
+}
+
+.address-table .contact-text {
+    vertical-align: middle;
+    padding-top: 0;
+}
+
+.address-table .contact-subtext {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 8px;
+    color: #000000;
+}
+
+.tel-label {
+    width: 150px;
+    font-size: 10px;
+}
+
+.tel-text {
+    width: 150px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+/* 学歴・職歴テーブル */
+.history-table {
+}
+
+.history-table th {
+    font-weight: 700;
+    font-size: 10px;
+    background-color: #ffffff;
+    text-align: center;
+    padding: 6px;
+}
+
+.history-table td {
+    height: 28px;
+    padding: 2px 8px;
+}
+
+.year-col {
+    width: 55px;
+    text-align: center;
+}
+
+.month-col {
+    width: 35px;
+    text-align: center;
+}
+
+.year-val, .month-val {
+    text-align: center;
+    font-size: 12px;
+}
+
+.detail-val {
+    text-align: left;
+    font-size: 12px;
+    padding-left: 15px;
+}
+
+/* 左半分の学歴・職歴テーブル特有 */
+.history-left {
+    margin-bottom: 8px; /* 記入上の注意との間隔 */
+}
+
+/* 記入上の注意 */
+.note-section {
+    font-size: 8px;
+    display: flex;
+    align-items: flex-start;
+    color: #000000;
+    padding-left: 5px;
+    line-height: 1.4;
+}
+
+.note-title {
+    font-weight: 700;
+    margin-right: 15px;
+    white-space: nowrap;
+}
+
+.note-body {
+    font-size: 8px;
+}
+
+/* 右半分の調整 */
+.sheet-right {
+    padding-top: 47px; /* 左半分のヘッダー高さ(履 歴 書)に合わせる */
+}
+
+/* 資格・免許テーブル */
+.license-table {
+    margin-top: 15px; /* 上の学歴・職歴との間に隙間を空ける */
+    margin-bottom: 15px; /* 下の志望動機との間に隙間を空ける */
+}
+
+.license-table td {
+    height: 28px;
+}
+
+/* 志望動機・通勤時間等の 一体型テーブル */
+.meta-info-table {
+    margin-bottom: 15px; /* 下の本人希望記入欄との間に隙間を空ける */
+    height: 190px;
+}
+
+.meta-info-table td {
+    padding: 0;
+}
+
+.motivation-col {
+    width: 390px; /* 用紙幅縮小に合わせて420pxから390pxに縮小 */
+    padding: 10px !important;
+    vertical-align: top;
+}
+
+.motivation-col .meta-label {
+    font-size: 9px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.motivation-content {
+    font-size: 9.5px; /* 最後の行が折り返されないようにサイズ調整 */
+    line-height: 1.6;
+    padding-left: 5px;
+}
+
+.side-label-col {
+    height: 22px;
+    background-color: #ffffff;
+    font-weight: 700;
+    font-size: 9px;
+    padding-left: 8px !important;
+    border-bottom: 1px solid #000000;
+}
+
+.side-content-col {
+    height: 38px;
+    font-size: 11px; /* 12pxから11pxに少し縮小して表示切れを防ぐ */
+    padding-left: 6px !important; /* 横幅に余裕を持たせるためにパディングを縮小 */
+    white-space: nowrap; /* 折り返しを防止して1行で綺麗に表示 */
+}
+
+/* 配偶者分割セル */
+.spouse-label-col {
+    height: 22px;
+    width: 100px;
+    font-weight: 700;
+    font-size: 9px;
+    padding-left: 8px !important;
+    border-bottom: 1px solid #000000;
+}
+
+.spouse-content-col {
+    height: 48px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+/* 丸囲みのスタイル (配偶者用) */
+.circle-wrap {
+    display: inline-flex;
+    align-items: center;
+    gap: 2px;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+}
+
+.circle-item {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid transparent;
+}
+
+.circle-item.active {
+    border-color: #000000;
+    border-width: 1.5px;
+}
+
+/* 本人希望記入欄テーブル */
+.wishes-table {
+    height: 135px;
+    margin-bottom: 8px; /* 記入上の注意との間隔を空ける */
+}
+
+.wishes-table td {
+    padding: 0;
+}
+
+.wishes-label-col {
+    height: 25px;
+    font-weight: 700;
+    font-size: 9px;
+    padding-left: 10px !important;
+    border-bottom: 1px solid #000000;
+    background-color: #ffffff;
+}
+
+.wishes-val {
+    height: 22px;
+    font-size: 11px;
+    padding-left: 15px !important;
+    vertical-align: middle;
+}
+
+/* 世界人口リンクのスタイル */
+.population-link {
+    color: #000000;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+}
+
+.population-link:hover {
+    opacity: 0.7;
+    text-decoration: underline;
+}
+
+/* 氏名の漢字リンクのスタイル */
+.name-kanji-link {
+    color: #000000;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+}
+
+.name-kanji-link:hover {
+    opacity: 0.6;
+    text-decoration: underline;
+}
+

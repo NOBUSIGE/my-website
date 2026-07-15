@@ -1,0 +1,1508 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>履歴書データベース - AIランダム生成</title>
+    <meta name="description" content="架空のユニークな人物たちの履歴書データベースです。">
+    <!-- Google Fonts: Noto Sans JP (ゴシック) & Noto Serif JP (明朝) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 1440x900 のメイン画面枠 -->
+    <div class="main-app-container">
+        <!-- 上部ヘッダーバー -->
+        <header class="main-header">
+            <h1>履歴書データベース</h1>
+        </header>
+
+        <!-- メイン表示領域 (1440x900制限・スクロール用ラッパー) -->
+        <main class="viewport-wrapper">
+
+            <!-- 1人目：原田信繁 -->
+            <div class="resume-container">
+                <!-- 履歴書 左半分 -->
+                <section class="resume-sheet sheet-left">
+                    <div class="sheet-header">
+                        <h2 class="title-resume">履 歴 書</h2>
+                        <div class="current-date">平成&nbsp;&nbsp;&nbsp;&nbsp;年&nbsp;&nbsp;&nbsp;&nbsp;月&nbsp;&nbsp;&nbsp;&nbsp;日現在</div>
+                    </div>
+
+                    <!-- プロフィール・基本情報ブロック -->
+                    <div class="profile-block">
+                        <table class="info-table">
+                            <tr>
+                                <td class="label-col ruby-label">ふりがな</td>
+                                <td class="content-col font-serif ruby-text" colspan="2">はらだ&nbsp;&nbsp;のぶしげ</td>
+                            </tr>
+                            <tr>
+                                <td class="label-col name-label">氏&nbsp;&nbsp;&nbsp;&nbsp;名</td>
+                                <td class="content-col font-serif name-text" colspan="2">
+                                    <a href="https://kanji.jitenon.jp/kanji/118" target="_blank" rel="noopener noreferrer" class="name-kanji-link">原</a>
+                                    <a href="https://kanji.jitenon.jp/kanji/062" target="_blank" rel="noopener noreferrer" class="name-kanji-link">田</a>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <a href="https://kanji.jitenon.jp/kanjib/542" target="_blank" rel="noopener noreferrer" class="name-kanji-link">信</a>
+                                    <a href="https://kanji.jitenon.jp/kanjic/1235" target="_blank" rel="noopener noreferrer" class="name-kanji-link">繁</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="content-col font-serif birth-text" colspan="2">
+                                    2008&nbsp;&nbsp;年&nbsp;&nbsp;3&nbsp;&nbsp;月&nbsp;&nbsp;1&nbsp;&nbsp;日生&nbsp;&nbsp;（満&nbsp;&nbsp;18&nbsp;&nbsp;歳）
+                                </td>
+                                <td class="gender-col label-col">
+                                    <div class="gender-wrap">
+                                        <div class="gender-note">※</div>
+                                        <div class="gender-options">
+                                            <span class="gender-item active">男</span>・<span class="gender-item">女</span>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+
+                        <!-- 写真貼付枠 -->
+                        <div class="photo-box" data-gender="men">
+                            <div class="photo-text">
+                                写真をはる位置<br>
+                                <span class="photo-subtext">
+                                    写真をはる必要がある場合<br>
+                                    1. 縦&nbsp;&nbsp;36～40mm<br>
+                                    &nbsp;&nbsp;&nbsp;横&nbsp;&nbsp;24～30mm<br>
+                                    2. 本人単身胸から上<br>
+                                    3. 裏面のりづけ
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 住所・連絡先テーブル -->
+                    <table class="address-table">
+                        <tr>
+                            <td class="label-col ruby-label">ふりがな</td>
+                            <td class="content-col font-serif ruby-text">はらだのぶしげのいえ</td>
+                            <td class="tel-label label-col">電話</td>
+                        </tr>
+                        <tr class="row-address">
+                            <td class="label-col">現&nbsp;&nbsp;住&nbsp;&nbsp;所</td>
+                            <td class="content-col font-serif address-text">
+                                <span class="postal-code">〒 20080301</span>
+                                <div class="address-detail">原田信繁の家</div>
+                            </td>
+                            <td class="tel-content font-serif tel-text">
+                                原田信繁の電話
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="label-col ruby-label">ふりがな</td>
+                            <td class="content-col font-serif ruby-text"></td>
+                            <td class="tel-label label-col">電話</td>
+                        </tr>
+                        <tr class="row-address">
+                            <td class="label-col">連&nbsp;&nbsp;絡&nbsp;&nbsp;先</td>
+                            <td class="content-col font-serif address-text contact-text">
+                                <span class="postal-code">〒</span>
+                                <span class="contact-subtext">（現住所場所を希望する場合のみ記入）</span>
+                            </td>
+                            <td class="tel-content font-serif tel-text"></td>
+                        </tr>
+                    </table>
+
+                    <!-- 学歴・職歴テーブル（左） -->
+                    <table class="history-table history-left">
+                        <thead>
+                            <tr>
+                                <th class="year-col">年</th>
+                                <th class="month-col">月</th>
+                                <th class="detail-col">学&nbsp;&nbsp;&nbsp;&nbsp;歴&nbsp;&nbsp;&nbsp;&nbsp;・&nbsp;&nbsp;&nbsp;&nbsp;職&nbsp;&nbsp;&nbsp;&nbsp;歴&nbsp;&nbsp;（各別にまとめて書く）</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="font-serif">
+                                <td class="year-val">2008</td>
+                                <td class="month-val">3</td>
+                                <td class="detail-val">原田信繁の物語始動</td>
+                            </tr>
+                            <tr class="font-serif">
+                                <td class="year-val">2010</td>
+                                <td class="month-val">8</td>
+                                <td class="detail-val">コロンビアへ単身赴任</td>
+                            </tr>
+                            <tr class="font-serif">
+                                <td class="year-val">2013</td>
+                                <td class="month-val">9</td>
+                                <td class="detail-val">言語の壁により断念</td>
+                            </tr>
+                            <tr class="font-serif">
+                                <td class="year-val">2014</td>
+                                <td class="month-val">4</td>
+                                <td class="detail-val">シベリア国立小学校入学</td>
+                            </tr>
+                            <tr class="font-serif">
+                                <td class="year-val">2014</td>
+                                <td class="month-val">10</td>
+                                <td class="detail-val">シベリア国立小学校飛び級で卒業</td>
+                            </tr>
+                            <tr class="font-serif">
+                                <td class="year-val">2013</td>
+                                <td class="month-val">12</td>
+                                <td class="detail-val">スペインバルセロナにてサクラダファミリアの建設に携わる</td>
+                            </tr>
+                            <tr class="font-serif">
+                                <td class="year-val">2015</td>
+                                <td class="month-val">6</td>
+                                <td class="detail-val">素麺が恋しくなり日本へ帰国</td>
+                            </tr>
+                            <tr class="font-serif">
+                                <td class="year-val">2015</td>
+                                <td class="month-val">8</td>
+                                <td class="detail-val">岐阜県大垣市養老の滝近くで油田を発見</td>
+                            </tr>
+                            <tr class="font-serif">
+                                <td class="year-val">2016</td>
+                                <td class="month-val">1</td>
+                                <td class="detail-val">伊勢神宮の横に原田信繁神宮の建設を予定する</td>
+                            </tr>
+                            <tr class="font-serif">
+                                <td class="year-val">2016</td>
+                                <td class="month-val">2</td>
+                                <td class="detail-val">油田が火事により資金がなくなり建設を断念</td>
+                            </tr>
+                            <tr class="font-serif">
+                                <td class="year-val">2016</td>
+                                <td class="month-val">3</td>
+                                <td class="detail-val">寿司職人になるためアメリカの寿司屋に修行へ</td>
+                            </tr>
+                            <tr class="font-serif">
+                                <td class="year-val">2023</td>
+                                <td class="month-val">3</td>
+                                <td class="detail-val">一人前になったため日本へ帰国</td>
+                            </tr>
+                            <tr class="font-serif">
+                                <td class="year-val">2023</td>
+                                <td class="month-val">4</td>
+                                <td class="detail-val">愛知県立犬山総合高校&nbsp;&nbsp;入学</td>
+                            </tr>
+                            <tr class="font-serif">
+                                <td class="year-val">2023</td>
+                                <td class="month-val">10</td>
+                                <td class="detail-val">はま寿司原田信繁店&nbsp;&nbsp;アルバイト入社</td>
+                            </tr>
+                            <tr class="font-serif">
+                                <td class="year-val">2024</td>
+                                <td class="month-val">2</td>
+                                <td class="detail-val">はま寿司原田信繁店&nbsp;&nbsp;アルバイト退社</td>
+                            </tr>
+                            <tr class="font-serif">
+                                <td class="year-val">2025</td>
+                                <td class="month-val">2</td>
+                                <td class="detail-val">愛知県立犬山総合高校&nbsp;&nbsp;卒業</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+
+                <!-- 履歴書 右半分 -->
+                <section class="resume-sheet sheet-right">
+                    <!-- 学歴・職歴テーブル（右） -->
+                    <table class="history-table history-right">
+                        <thead>
+                            <tr>
+                                <th class="year-col">年</th>
+                                <th class="month-col">月</th>
+                                <th class="detail-col">学&nbsp;&nbsp;&nbsp;&nbsp;歴&nbsp;&nbsp;&nbsp;&nbsp;・&nbsp;&nbsp;&nbsp;&nbsp;職&nbsp;&nbsp;&nbsp;&nbsp;歴&nbsp;&nbsp;（各別にまとめて書く）</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="font-serif">
+                                <td class="year-val">2026</td>
+                                <td class="month-val">4</td>
+                                <td class="detail-val">名古屋デザイン＆テクノロジー専門学校&nbsp;&nbsp;入学</td>
+                            </tr>
+                            <tr><td class="year-val"></td><td class="month-val"></td><td class="detail-val"></td></tr>
+                            <tr><td class="year-val"></td><td class="month-val"></td><td class="detail-val"></td></tr>
+                            <tr><td class="year-val"></td><td class="month-val"></td><td class="detail-val"></td></tr>
+                            <tr><td class="year-val"></td><td class="month-val"></td><td class="detail-val"></td></tr>
+                            <tr><td class="year-val"></td><td class="month-val"></td><td class="detail-val"></td></tr>
+                        </tbody>
+                    </table>
+
+                    <!-- 資格・免許テーブル -->
+                    <table class="license-table">
+                        <thead>
+                            <tr>
+                                <th class="year-col">年</th>
+                                <th class="month-col">月</th>
+                                <th class="detail-col">資&nbsp;&nbsp;&nbsp;&nbsp;格&nbsp;&nbsp;&nbsp;&nbsp;・&nbsp;&nbsp;&nbsp;&nbsp;免&nbsp;&nbsp;&nbsp;&nbsp;許</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="font-serif">
+                                <td class="year-val">2004</td>
+                                <td class="month-val">3</td>
+                                <td class="detail-val">自認特級建築士</td>
+                            </tr>
+                            <tr class="font-serif">
+                                <td class="year-val">2008</td>
+                                <td class="month-val">3</td>
+                                <td class="detail-val">全言語初級</td>
+                            </tr>
+                            <tr><td class="year-val"></td><td class="month-val"></td><td class="detail-val"></td></tr>
+                            <tr><td class="year-val"></td><td class="month-val"></td><td class="detail-val"></td></tr>
+                            <tr><td class="year-val"></td><td class="month-val"></td><td class="detail-val"></td></tr>
+                            <tr><td class="year-val"></td><td class="month-val"></td><td class="detail-val"></td></tr>
+                            <tr><td class="year-val"></td><td class="month-val"></td><td class="detail-val"></td></tr>
+                        </tbody>
+                    </table>
+
+                    <!-- 志望動機・通勤時間・扶養家族・配偶者 一体型テーブル -->
+                    <table class="meta-info-table">
+                        <tr>
+                            <td class="motivation-col" rowspan="6">
+                                <div class="meta-label">志望の動機、特技、好きな学科、アピールポイントなど</div>
+                                <div class="motivation-content font-serif">
+                                    原始の炎のような情熱を胸に、<br>
+                                    田んぼの一粒 of 稲にも未来産業の可能性を見出し、<br>
+                                    信念とWi-Fiだけを頼りに未踏の課題へ突撃し、<br>
+                                    繁栄する社会のド真ん中で、御社とともに人類の明日を発見させていきます。
+                                </div>
+                            </td>
+                            <td class="side-label-col" colspan="2">通勤時間</td>
+                        </tr>
+                        <tr>
+                            <td class="side-content-col font-serif" colspan="2">
+                                約&nbsp;&nbsp;4.0734e+13&nbsp;&nbsp;時間
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="side-label-col" colspan="2">扶養家族数（配偶者を除く）</td>
+                        </tr>
+                        <tr>
+                            <td class="side-content-col font-serif" colspan="2">
+                                <a href="https://www.worldometers.info/ja/%E4%B8%96%E7%95%8C%E4%BA%BA%E5%8F%A3/" target="_blank" rel="noopener noreferrer" class="population-link">
+                                    <span class="live-population-counter">8,300,711,056</span>
+                                </a>&nbsp;&nbsp;人
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="spouse-label-col">配偶者</td>
+                            <td class="spouse-label-col">配偶者の扶養義務</td>
+                        </tr>
+                        <tr>
+                            <td class="spouse-content-col font-serif">
+                                <span class="circle-wrap">
+                                    ※<span class="circle-item active">原</span>・<span class="circle-item">田</span>
+                                </span>
+                            </td>
+                            <td class="spouse-content-col font-serif">
+                                <span class="circle-wrap">
+                                    ※<span class="circle-item">信</span>・<span class="circle-item active">繁</span>
+                                </span>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <!-- 本人希望記入欄テーブル -->
+                    <table class="wishes-table">
+                        <thead>
+                            <tr>
+                                <td class="wishes-label-col">
+                                    本人希望記入欄（特に給料・職種・勤務時間・勤務地・その他について希望があれば記入）
+                                </td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="font-serif">
+                                <td class="wishes-val">サクラダファミリア横にNOの塔を作りたい</td>
+                            </tr>
+                            <tr class="font-serif">
+                                <td class="wishes-val">世界平和&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;イーロンマスクと同じ財産が欲しい</td>
+                            </tr>
+                            <tr><td class="wishes-val"></td></tr>
+                            <tr><td class="wishes-val"></td></tr>
+                            <tr><td class="wishes-val"></td></tr>
+                        </tbody>
+                    </table>
+
+                    <!-- 記入上の注意 -->
+                    <div class="note-section">
+                        <span class="note-title">記入上の注意</span>
+                        <div class="note-body">
+                            1. 鉛筆以外の黒又は青の筆記具で記入。&nbsp;&nbsp;&nbsp;&nbsp;2. 数字はアラビア数字で、文字はくずさず正確に書く。&nbsp;&nbsp;&nbsp;&nbsp;3. ※印のところは、該当するものを○で囲む。&nbsp;&nbsp;&nbsp;&nbsp;4. すべてがランダムの履歴書になります。
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- 2人目：鬼頭舞香 -->
+            <div class="resume-container">
+                <!-- 履歴書 左半分 -->
+                <section class="resume-sheet sheet-left">
+                    <div class="sheet-header">
+                        <h2 class="title-resume">履 歴 書</h2>
+                        <div class="current-date">平成&nbsp;&nbsp;&nbsp;&nbsp;年&nbsp;&nbsp;&nbsp;&nbsp;月&nbsp;&nbsp;&nbsp;&nbsp;日現在</div>
+                    </div>
+
+                    <!-- プロフィール・基本情報ブロック -->
+                    <div class="profile-block">
+                        <table class="info-table">
+                            <tr>
+                                <td class="label-col ruby-label">ふりがな</td>
+                                <td class="content-col font-serif ruby-text" colspan="2">きとう&nbsp;&nbsp;まいか</td>
+                            </tr>
+                            <tr>
+                                <td class="label-col name-label">氏&nbsp;&nbsp;&nbsp;&nbsp;名</td>
+                                <td class="content-col font-serif name-text" colspan="2">
+                                    <a href="https://kanji.jitenon.jp/kanji/279" target="_blank" rel="noopener noreferrer" class="name-kanji-link">鬼</a>
+                                    <a href="https://kanji.jitenon.jp/kanji/444" target="_blank" rel="noopener noreferrer" class="name-kanji-link">頭</a>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <a href="https://kanji.jitenon.jp/kanji/789" target="_blank" rel="noopener noreferrer" class="name-kanji-link">舞</a>
+                                    <a href="https://kanji.jitenon.jp/kanji/708" target="_blank" rel="noopener noreferrer" class="name-kanji-link">香</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="content-col font-serif birth-text" colspan="2">
+                                    1999&nbsp;&nbsp;年&nbsp;&nbsp;7&nbsp;&nbsp;月&nbsp;&nbsp;20&nbsp;&nbsp;日生&nbsp;&nbsp;（満&nbsp;&nbsp;27&nbsp;&nbsp;歳）
+                                </td>
+                                <td class="gender-col label-col">
+                                    <div class="gender-wrap">
+                                        <div class="gender-note">※</div>
+                                        <div class="gender-options">
+                                            <span class="gender-item">男</span>・<span class="gender-item active">女</span>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+
+                        <!-- 写真貼付枠 -->
+                        <div class="photo-box" data-gender="women">
+                            <div class="photo-text">
+                                写真をはる位置<br>
+                                <span class="photo-subtext">
+                                    写真をはる必要がある場合<br>
+                                    1. 縦&nbsp;&nbsp;36～40mm<br>
+                                    &nbsp;&nbsp;&nbsp;横&nbsp;&nbsp;24～30mm<br>
+                                    2. 本人単身胸から上<br>
+                                    3. 裏面のりづけ
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 住所・連絡先テーブル -->
+                    <table class="address-table">
+                        <tr>
+                            <td class="label-col ruby-label">ふりがな</td>
+                            <td class="content-col font-serif ruby-text">きとうまいかのいえ</td>
+                            <td class="tel-label label-col">電話</td>
+                        </tr>
+                        <tr class="row-address">
+                            <td class="label-col">現&nbsp;&nbsp;住&nbsp;&nbsp;所</td>
+                            <td class="content-col font-serif address-text">
+                                <span class="postal-code">〒 19990720</span>
+                                <div class="address-detail">鬼頭舞香の家</div>
+                            </td>
+                            <td class="tel-content font-serif tel-text">
+                                鬼頭舞香の電話
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="label-col ruby-label">ふりがな</td>
+                            <td class="content-col font-serif ruby-text"></td>
+                            <td class="tel-label label-col">電話</td>
+                        </tr>
+                        <tr class="row-address">
+                            <td class="label-col">連&nbsp;&nbsp;絡&nbsp;&nbsp;先</td>
+                            <td class="content-col font-serif address-text contact-text">
+                                <span class="postal-code">〒</span>
+                                <span class="contact-subtext">（現住所場所を希望する場合のみ記入）</span>
+                            </td>
+                            <td class="tel-content font-serif tel-text"></td>
+                        </tr>
+                    </table>
+
+                    <!-- 学歴・職歴テーブル（左） -->
+                    <table class="history-table history-left">
+                        <thead>
+                            <tr>
+                                <th class="year-col">年</th>
+                                <th class="month-col">月</th>
+                                <th class="detail-col">学&nbsp;&nbsp;&nbsp;&nbsp;歴&nbsp;&nbsp;&nbsp;&nbsp;・&nbsp;&nbsp;&nbsp;&nbsp;職&nbsp;&nbsp;&nbsp;&nbsp;歴&nbsp;&nbsp;（各別にまとめて書く）</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="font-serif">
+                                <td class="year-val">1999</td>
+                                <td class="month-val">7</td>
+                                <td class="detail-val">鬼頭舞香、世に爆誕</td>
+                            </tr>
+                            <tr class="font-serif">
+                                <td class="year-val">2002</td>
+                                <td class="month-val">4</td>
+                                <td class="detail-val">砂場でスプーン一本から巨大地下帝国を建設</td>
+                            </tr>
+                            <tr class="font-serif">
+                                <td class="year-val">2005</td>
+                                <td class="month-val">12</td>
+                                <td class="detail-val">近所の野良猫と不可侵条約を締結</td>
+                            </tr>
+                            <tr class="font-serif">
+                                <td class="year-val">2008</td>
+                                <td class="month-val">4</td>
+                                <td class="detail-val">太平洋横断いかだレースに出場（途中で昼寝し挫折）</td>
+                            </tr>
+                            <tr class="font-serif">
+                                <td class="year-val">2012</td>
+                                <td class="month-val">4</td>
+                                <td class="detail-val">鬼頭舞香式・超高速両手箸食い法を確立</td>
+                            </tr>
+                            <tr class="font-serif">
+                                <td class="year-val">2015</td>
+                                <td class="month-val">4</td>
+                                <td class="detail-val">愛知県立犬山総合中学校&nbsp;&nbsp;入学</td>
+                            </tr>
+                            <tr class="font-serif">
+                                <td class="year-val">2018</td>
+                                <td class="month-val">4</td>
+                                <td class="detail-val">愛知県立犬山総合高校&nbsp;&nbsp;入学</td>
+                            </tr>
+                            <tr class="font-serif">
+                                <td class="year-val">2021</td>
+                                <td class="month-val">4</td>
+                                <td class="detail-val">愛知県立犬山総合高校&nbsp;&nbsp;卒業</td>
+                            </tr>
+                            <tr class="font-serif">
+                                <td class="year-val">2021</td>
+                                <td class="month-val">4</td>
+                                <td class="detail-val">謎の秘密結社「マヨネーズは飲み物」設立</td>
+                            </tr>
+                            <tr class="font-serif">
+                                <td class="year-val">2023</td>
+                                <td class="month-val">8</td>
+                                <td class="detail-val">秘密結社がマヨネーズの価格高騰により解散</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+
+                <!-- 履歴書 右半分 -->
+                <section class="resume-sheet sheet-right">
+                    <!-- 学歴・職歴テーブル（右） -->
+                    <table class="history-table history-right">
+                        <thead>
+                            <tr>
+                                <th class="year-col">年</th>
+                                <th class="month-col">月</th>
+                                <th class="detail-col">学&nbsp;&nbsp;&nbsp;&nbsp;歴&nbsp;&nbsp;&nbsp;&nbsp;・&nbsp;&nbsp;&nbsp;&nbsp;職&nbsp;&nbsp;&nbsp;&nbsp;歴&nbsp;&nbsp;（各別にまとめて書く）</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="font-serif">
+                                <td class="year-val">2024</td>
+                                <td class="month-val">4</td>
+                                <td class="detail-val">名古屋デザイン＆テクノロジー専門学校&nbsp;&nbsp;入学</td>
+                            </tr>
+                            <tr><td class="year-val"></td><td class="month-val"></td><td class="detail-val"></td></tr>
+                            <tr><td class="year-val"></td><td class="month-val"></td><td class="detail-val"></td></tr>
+                            <tr><td class="year-val"></td><td class="month-val"></td><td class="detail-val"></td></tr>
+                            <tr><td class="year-val"></td><td class="month-val"></td><td class="detail-val"></td></tr>
+                            <tr><td class="year-val"></td><td class="month-val"></td><td class="detail-val"></td></tr>
+                        </tbody>
+                    </table>
+
+                    <!-- 資格・免許テーブル -->
+                    <table class="license-table">
+                        <thead>
+                            <tr>
+                                <th class="year-col">年</th>
+                                <th class="month-col">月</th>
+                                <th class="detail-col">資&nbsp;&nbsp;&nbsp;&nbsp;格&nbsp;&nbsp;&nbsp;&nbsp;・&nbsp;&nbsp;&nbsp;&nbsp;免&nbsp;&nbsp;&nbsp;&nbsp;許</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="font-serif">
+                                <td class="year-val">2001</td>
+                                <td class="month-val">3</td>
+                                <td class="detail-val">おねだり検定1級</td>
+                            </tr>
+                            <tr class="font-serif">
+                                <td class="year-val">2010</td>
+                                <td class="month-val">5</td>
+                                <td class="detail-val">蚊を手で叩く成功率99%免許</td>
+                            </tr>
+                            <tr><td class="year-val"></td><td class="month-val"></td><td class="detail-val"></td></tr>
+                            <tr><td class="year-val"></td><td class="month-val"></td><td class="detail-val"></td></tr>
+                            <tr><td class="year-val"></td><td class="month-val"></td><td class="detail-val"></td></tr>
+                            <tr><td class="year-val"></td><td class="month-val"></td><td class="detail-val"></td></tr>
+                            <tr><td class="year-val"></td><td class="month-val"></td><td class="detail-val"></td></tr>
+                        </tbody>
+                    </table>
+
+                    <!-- 志望動機・通勤時間・扶養家族・配偶者 一体型テーブル -->
+                    <table class="meta-info-table">
+                        <tr>
+                            <td class="motivation-col" rowspan="6">
+                                <div class="meta-label">志望の動機、特技、好きな学科、アピールポイントなど</div>
+                                <div class="motivation-content font-serif">
+                                    鬼のような集中力で課題に取り組み、<br>
+                                    頭脳明晰なアプローチでシステムを構築し、<br>
+                                    舞うように軽やかにグローバル市場を開拓し、<br>
+                                    香り高い成功の果実を御社にもたらします。
+                                </div>
+                            </td>
+                            <td class="side-label-col" colspan="2">通勤時間</td>
+                        </tr>
+                        <tr>
+                            <td class="side-content-col font-serif" colspan="2">
+                                徒歩約&nbsp;&nbsp;0.003&nbsp;&nbsp;秒
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="side-label-col" colspan="2">扶養家族数（配偶者を除く）</td>
+                        </tr>
+                        <tr>
+                            <td class="side-content-col font-serif" colspan="2">
+                                <a href="https://www.worldometers.info/ja/%E4%B8%96%E7%95%8C%E4%BA%BA%E5%8F%A3/" target="_blank" rel="noopener noreferrer" class="population-link">
+                                    <span class="live-population-counter">8,300,711,056</span>
+                                </a>&nbsp;&nbsp;人
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="spouse-label-col">配偶者</td>
+                            <td class="spouse-label-col">配偶者の扶養義務</td>
+                        </tr>
+                        <tr>
+                            <td class="spouse-content-col font-serif">
+                                <span class="circle-wrap">
+                                    ※<span class="circle-item">鬼</span>・<span class="circle-item active">頭</span>
+                                </span>
+                            </td>
+                            <td class="spouse-content-col font-serif">
+                                <span class="circle-wrap">
+                                    ※<span class="circle-item active">舞</span>・<span class="circle-item">香</span>
+                                </span>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <!-- 本人希望記入欄テーブル -->
+                    <table class="wishes-table">
+                        <thead>
+                            <tr>
+                                <td class="wishes-label-col">
+                                    本人希望記入欄（特に給料・職種・勤務時間・勤務地・その他について希望があれば記入）
+                                </td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="font-serif">
+                                <td class="wishes-val">毎日3食マヨネーズを支給してほしい</td>
+                            </tr>
+                            <tr class="font-serif">
+                                <td class="wishes-val">オフィス内に猫専用のキャットタワーを設置希望</td>
+                            </tr>
+                            <tr><td class="wishes-val"></td></tr>
+                            <tr><td class="wishes-val"></td></tr>
+                            <tr><td class="wishes-val"></td></tr>
+                        </tbody>
+                    </table>
+
+                    <!-- 記入上の注意 -->
+                    <div class="note-section">
+                        <span class="note-title">記入上の注意</span>
+                        <div class="note-body">
+                            1. 鉛筆以外の黒又は青の筆記具で記入。&nbsp;&nbsp;&nbsp;&nbsp;2. 数字はアラビア数字で、文字はくずさず正確に書く。&nbsp;&nbsp;&nbsp;&nbsp;3. ※印のところは、該当するものを○で囲む。&nbsp;&nbsp;&nbsp;&nbsp;4. すべてがランダムの履歴書になります。
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- 3人目：五十嵐 尊 -->
+            <div class="resume-container">
+                <!-- 履歴書 左半分 -->
+                <section class="resume-sheet sheet-left">
+                    <div class="sheet-header">
+                        <h2 class="title-resume">履 歴 書</h2>
+                        <div class="current-date">平成&nbsp;&nbsp;&nbsp;&nbsp;年&nbsp;&nbsp;&nbsp;&nbsp;月&nbsp;&nbsp;&nbsp;&nbsp;日現在</div>
+                    </div>
+
+                    <!-- プロフィール・基本情報ブロック -->
+                    <div class="profile-block">
+                        <table class="info-table">
+                            <tr>
+                                <td class="label-col ruby-label">ふりがな</td>
+                                <td class="content-col font-serif ruby-text" colspan="2">いがらし&nbsp;&nbsp;たける</td>
+                            </tr>
+                            <tr>
+                                <td class="label-col name-label">氏&nbsp;&nbsp;&nbsp;&nbsp;名</td>
+                                <td class="content-col font-serif name-text" colspan="2">
+                                    <a href="https://kanji.jitenon.jp/kanji/005" target="_blank" rel="noopener noreferrer" class="name-kanji-link">五</a>
+                                    <a href="https://kanji.jitenon.jp/kanji/010" target="_blank" rel="noopener noreferrer" class="name-kanji-link">十</a>
+                                    <a href="https://kanji.jitenon.jp/kanji/1297" target="_blank" rel="noopener noreferrer" class="name-kanji-link">嵐</a>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <a href="https://kanji.jitenon.jp/kanji/582" target="_blank" rel="noopener noreferrer" class="name-kanji-link">尊</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="content-col font-serif birth-text" colspan="2">
+                                    1985&nbsp;&nbsp;年&nbsp;&nbsp;10&nbsp;&nbsp;月&nbsp;&nbsp;10&nbsp;&nbsp;日生&nbsp;&nbsp;（満&nbsp;&nbsp;40&nbsp;&nbsp;歳）
+                                </td>
+                                <td class="gender-col label-col">
+                                    <div class="gender-wrap">
+                                        <div class="gender-note">※</div>
+                                        <div class="gender-options">
+                                            <span class="gender-item active">男</span>・<span class="gender-item">女</span>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+
+                        <!-- 写真貼付枠 -->
+                        <div class="photo-box" data-gender="lego">
+                            <div class="photo-text">
+                                写真をはる位置<br>
+                                <span class="photo-subtext">
+                                    写真をはる必要がある場合<br>
+                                    1. 縦&nbsp;&nbsp;36～40mm<br>
+                                    &nbsp;&nbsp;&nbsp;横&nbsp;&nbsp;24～30mm<br>
+                                    2. 本人単身胸から上<br>
+                                    3. 裏面のりづけ
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 住所・連絡先テーブル -->
+                    <table class="address-table">
+                        <tr>
+                            <td class="label-col ruby-label">ふりがな</td>
+                            <td class="content-col font-serif ruby-text">いがらしたけるのひょうが</td>
+                            <td class="tel-label label-col">電話</td>
+                        </tr>
+                        <tr class="row-address">
+                            <td class="label-col">現&nbsp;&nbsp;住&nbsp;&nbsp;所</td>
+                            <td class="content-col font-serif address-text">
+                                <span class="postal-code">〒 19851010</span>
+                                <div class="address-detail">五十嵐尊の氷河</div>
+                            </td>
+                            <td class="tel-content font-serif tel-text">
+                                五十嵐尊の受信機
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="label-col ruby-label">ふりがな</td>
+                            <td class="content-col font-serif ruby-text"></td>
+                            <td class="tel-label label-col">電話</td>
+                        </tr>
+                        <tr class="row-address">
+                            <td class="label-col">連&nbsp;&nbsp;絡&nbsp;&nbsp;先</td>
+                            <td class="content-col font-serif address-text contact-text">
+                                <span class="postal-code">〒</span>
+                                <span class="contact-subtext">（現住所場所を希望する場合のみ記入）</span>
+                            </td>
+                            <td class="tel-content font-serif tel-text"></td>
+                        </tr>
+                    </table>
+
+                    <!-- 学歴・職歴テーブル（左） -->
+                    <table class="history-table history-left">
+                        <thead>
+                            <tr>
+                                <th class="year-col">年</th>
+                                <th class="month-col">月</th>
+                                <th class="detail-col">学&nbsp;&nbsp;&nbsp;&nbsp;歴&nbsp;&nbsp;&nbsp;&nbsp;・&nbsp;&nbsp;&nbsp;&nbsp;職&nbsp;&nbsp;&nbsp;&nbsp;歴&nbsp;&nbsp;（各別にまとめて書く）</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="font-serif">
+                                <td class="year-val">1985</td>
+                                <td class="month-val">10</td>
+                                <td class="detail-val">スイスの山奥で氷河から発掘される（年齢不詳）</td>
+                            </tr>
+                            <tr class="font-serif">
+                                <td class="year-val">1990</td>
+                                <td class="month-val">4</td>
+                                <td class="detail-val">アルプスの少女とヤギの権利向上デモを実施</td>
+                            </tr>
+                            <tr class="font-serif">
+                                <td class="year-val">1995</td>
+                                <td class="month-val">8</td>
+                                <td class="detail-val">チーズハットグの起源を主張し世界を巡る</td>
+                            </tr>
+                            <tr class="font-serif">
+                                <td class="year-val">2000</td>
+                                <td class="month-val">4</td>
+                                <td class="detail-val">富士山頂で冷やし中華専門店を開業（3日で閉店）</td>
+                            </tr>
+                            <tr class="font-serif">
+                                <td class="year-val">2005</td>
+                                <td class="month-val">10</td>
+                                <td class="detail-val">イルカとのテレパシー通信に成功（返信は「忙しい」）</td>
+                            </tr>
+                            <tr class="font-serif">
+                                <td class="year-val">2010</td>
+                                <td class="month-val">4</td>
+                                <td class="detail-val">名古屋市内の居酒屋で「レモンを勝手に絞るな」運動を展開</td>
+                            </tr>
+                            <tr class="font-serif">
+                                <td class="year-val">2015</td>
+                                <td class="month-val">4</td>
+                                <td class="detail-val">自宅の庭の泥水を新種の温泉として登録申請</td>
+                            </tr>
+                            <tr class="font-serif">
+                                <td class="year-val">2022</td>
+                                <td class="month-val">4</td>
+                                <td class="detail-val">悟りを開いて日本へ帰国</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+
+                <!-- 履歴書 右半分 -->
+                <section class="resume-sheet sheet-right">
+                    <!-- 学歴・職歴テーブル（右） -->
+                    <table class="history-table history-right">
+                        <thead>
+                            <tr>
+                                <th class="year-col">年</th>
+                                <th class="month-col">月</th>
+                                <th class="detail-col">学&nbsp;&nbsp;&nbsp;&nbsp;歴&nbsp;&nbsp;&nbsp;&nbsp;・&nbsp;&nbsp;&nbsp;&nbsp;職&nbsp;&nbsp;&nbsp;&nbsp;歴&nbsp;&nbsp;（各別にまとめて書く）</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="font-serif">
+                                <td class="year-val">2024</td>
+                                <td class="month-val">4</td>
+                                <td class="detail-val">名古屋デザイン＆テクノロジー専門学校&nbsp;&nbsp;入学</td>
+                            </tr>
+                            <tr><td class="year-val"></td><td class="month-val"></td><td class="detail-val"></td></tr>
+                            <tr><td class="year-val"></td><td class="month-val"></td><td class="detail-val"></td></tr>
+                            <tr><td class="year-val"></td><td class="month-val"></td><td class="detail-val"></td></tr>
+                            <tr><td class="year-val"></td><td class="month-val"></td><td class="detail-val"></td></tr>
+                            <tr><td class="year-val"></td><td class="month-val"></td><td class="detail-val"></td></tr>
+                        </tbody>
+                    </table>
+
+                    <!-- 資格・免許テーブル -->
+                    <table class="license-table">
+                        <thead>
+                            <tr>
+                                <th class="year-col">年</th>
+                                <th class="month-col">月</th>
+                                <th class="detail-col">資&nbsp;&nbsp;&nbsp;&nbsp;格&nbsp;&nbsp;&nbsp;&nbsp;・&nbsp;&nbsp;&nbsp;&nbsp;免&nbsp;&nbsp;&nbsp;&nbsp;許</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="font-serif">
+                                <td class="year-val">1998</td>
+                                <td class="month-val">7</td>
+                                <td class="detail-val">アルプス登山ガイド（自称）</td>
+                            </tr>
+                            <tr class="font-serif">
+                                <td class="year-val">2005</td>
+                                <td class="month-val">10</td>
+                                <td class="detail-val">イルカ語検定3級</td>
+                            </tr>
+                            <tr class="font-serif">
+                                <td class="year-val">2012</td>
+                                <td class="month-val">3</td>
+                                <td class="detail-val">唐揚げレモン判定士</td>
+                            </tr>
+                            <tr><td class="year-val"></td><td class="month-val"></td><td class="detail-val"></td></tr>
+                            <tr><td class="year-val"></td><td class="month-val"></td><td class="detail-val"></td></tr>
+                            <tr><td class="year-val"></td><td class="month-val"></td><td class="detail-val"></td></tr>
+                            <tr><td class="year-val"></td><td class="month-val"></td><td class="detail-val"></td></tr>
+                        </tbody>
+                    </table>
+
+                    <!-- 志望動機・通勤時間・扶養家族・配偶者 一体型テーブル -->
+                    <table class="meta-info-table">
+                        <tr>
+                            <td class="motivation-col" rowspan="6">
+                                <div class="meta-label">志望の動機、特技、好きな学科、アピールポイントなど</div>
+                                <div class="motivation-content font-serif">
+                                    五大州を股にかける壮大な野望を持ち、<br>
+                                    十全なる技術力と決断力で開発を牽引し、<br>
+                                    嵐のようなイノベーションを巻き起こし、<br>
+                                    尊い理念を胸に、世界に新たな価値を提供します。
+                                </div>
+                            </td>
+                            <td class="side-label-col" colspan="2">通勤時間</td>
+                        </tr>
+                        <tr>
+                            <td class="side-content-col font-serif" colspan="2">
+                                そよ風に乗って約&nbsp;&nbsp;45&nbsp;&nbsp;分
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="side-label-col" colspan="2">扶養家族数（配偶者を除く）</td>
+                        </tr>
+                        <tr>
+                            <td class="side-content-col font-serif" colspan="2">
+                                <a href="https://www.worldometers.info/ja/%E4%B8%96%E7%95%8C%E4%BA%BA%E5%8F%A3/" target="_blank" rel="noopener noreferrer" class="population-link">
+                                    <span class="live-population-counter">8,300,711,056</span>
+                                </a>&nbsp;&nbsp;人
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="spouse-label-col">配偶者</td>
+                            <td class="spouse-label-col">配偶者の扶養義務</td>
+                        </tr>
+                        <tr>
+                            <td class="spouse-content-col font-serif">
+                                <span class="circle-wrap">
+                                    ※<span class="circle-item active">五</span>・<span class="circle-item">十</span>
+                                </span>
+                            </td>
+                            <td class="spouse-content-col font-serif">
+                                <span class="circle-wrap">
+                                    ※<span class="circle-item">嵐</span>・<span class="circle-item active">尊</span>
+                                </span>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <!-- 本人希望記入欄テーブル -->
+                    <table class="wishes-table">
+                        <thead>
+                            <tr>
+                                <td class="wishes-label-col">
+                                    本人希望記入欄（特に給料・職種・勤務時間・勤務地・その他について希望があれば記入）
+                                </td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="font-serif">
+                                <td class="wishes-val">週休4日、かつ勤務時間は月3時間まで</td>
+                            </tr>
+                            <tr class="font-serif">
+                                <td class="wishes-val">デスクの横にハンモックを常設してほしい</td>
+                            </tr>
+                            <tr><td class="wishes-val"></td></tr>
+                            <tr><td class="wishes-val"></td></tr>
+                            <tr><td class="wishes-val"></td></tr>
+                        </tbody>
+                    </table>
+
+                    <!-- 記入上の注意 -->
+                    <div class="note-section">
+                        <span class="note-title">記入上の注意</span>
+                        <div class="note-body">
+                            1. 鉛筆以外の黒又は青の筆記具で記入。&nbsp;&nbsp;&nbsp;&nbsp;2. 数字はアラビア数字で、文字はくずさず正確に書く。&nbsp;&nbsp;&nbsp;&nbsp;3. ※印のところは、該当するものを○で囲む。&nbsp;&nbsp;&nbsp;&nbsp;4. すべてがランダムの履歴書になります。
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- 4人目：宇佐美 萌 -->
+            <div class="resume-container">
+                <!-- 履歴書 左半分 -->
+                <section class="resume-sheet sheet-left">
+                    <div class="sheet-header">
+                        <h2 class="title-resume">履 歴 書</h2>
+                        <div class="current-date">平成&nbsp;&nbsp;&nbsp;&nbsp;年&nbsp;&nbsp;&nbsp;&nbsp;月&nbsp;&nbsp;&nbsp;&nbsp;日現在</div>
+                    </div>
+
+                    <!-- プロフィール・基本情報ブロック -->
+                    <div class="profile-block">
+                        <table class="info-table">
+                            <tr>
+                                <td class="label-col ruby-label">ふりがな</td>
+                                <td class="content-col font-serif ruby-text" colspan="2">うさみ&nbsp;&nbsp;もえ</td>
+                            </tr>
+                            <tr>
+                                <td class="label-col name-label">氏&nbsp;&nbsp;&nbsp;&nbsp;名</td>
+                                <td class="content-col font-serif name-text" colspan="2">
+                                    <a href="https://kanji.jitenon.jp/kanji/329" target="_blank" rel="noopener noreferrer" class="name-kanji-link">宇</a>
+                                    <a href="https://kanji.jitenon.jp/kanji/303" target="_blank" rel="noopener noreferrer" class="name-kanji-link">佐</a>
+                                    <a href="https://kanji.jitenon.jp/kanji/132" target="_blank" rel="noopener noreferrer" class="name-kanji-link">美</a>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <a href="https://kanji.jitenon.jp/kanjic/3313" target="_blank" rel="noopener noreferrer" class="name-kanji-link">萌</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="content-col font-serif birth-text" colspan="2">
+                                    2006&nbsp;&nbsp;年&nbsp;&nbsp;11&nbsp;&nbsp;月&nbsp;&nbsp;23&nbsp;&nbsp;日生&nbsp;&nbsp;（満&nbsp;&nbsp;19&nbsp;&nbsp;歳）
+                                </td>
+                                <td class="gender-col label-col">
+                                    <div class="gender-wrap">
+                                        <div class="gender-note">※</div>
+                                        <div class="gender-options">
+                                            <span class="gender-item">男</span>・<span class="gender-item active">女</span>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+
+                        <!-- 写真貼付枠 -->
+                        <div class="photo-box" data-gender="women">
+                            <div class="photo-text">
+                                写真をはる位置<br>
+                                <span class="photo-subtext">
+                                    写真をはる必要がある場合<br>
+                                    1. 縦&nbsp;&nbsp;36～40mm<br>
+                                    &nbsp;&nbsp;&nbsp;横&nbsp;&nbsp;24～30mm<br>
+                                    2. 本人単身胸から上<br>
+                                    3. 裏面のりづけ
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 住所・連絡先テーブル -->
+                    <table class="address-table">
+                        <tr>
+                            <td class="label-col ruby-label">ふりがな</td>
+                            <td class="content-col font-serif ruby-text">うさみもえのにんじんばたけ</td>
+                            <td class="tel-label label-col">電話</td>
+                        </tr>
+                        <tr class="row-address">
+                            <td class="label-col">現&nbsp;&nbsp;住&nbsp;&nbsp;所</td>
+                            <td class="content-col font-serif address-text">
+                                <span class="postal-code">〒 20061123</span>
+                                <div class="address-detail">宇佐美萌のニンジン畑</div>
+                            </td>
+                            <td class="tel-content font-serif tel-text">
+                                宇佐美萌の耳
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="label-col ruby-label">ふりがな</td>
+                            <td class="content-col font-serif ruby-text"></td>
+                            <td class="tel-label label-col">電話</td>
+                        </tr>
+                        <tr class="row-address">
+                            <td class="label-col">連&nbsp;&nbsp;絡&nbsp;&nbsp;先</td>
+                            <td class="content-col font-serif address-text contact-text">
+                                <span class="postal-code">〒</span>
+                                <span class="contact-subtext">（現住所場所を希望する場合のみ記入）</span>
+                            </td>
+                            <td class="tel-content font-serif tel-text"></td>
+                        </tr>
+                    </table>
+
+                    <!-- 学歴・職歴テーブル（左） -->
+                    <table class="history-table history-left">
+                        <thead>
+                            <tr>
+                                <th class="year-col">年</th>
+                                <th class="month-col">月</th>
+                                <th class="detail-col">学&nbsp;&nbsp;&nbsp;&nbsp;歴&nbsp;&nbsp;&nbsp;&nbsp;・&nbsp;&nbsp;&nbsp;&nbsp;職&nbsp;&nbsp;&nbsp;&nbsp;歴&nbsp;&nbsp;（各別にまとめて書く）</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="font-serif">
+                                <td class="year-val">2006</td>
+                                <td class="month-val">11</td>
+                                <td class="detail-val">ニンジン畑の巨大ニンジンの中から発見される</td>
+                            </tr>
+                            <tr class="font-serif">
+                                <td class="year-val">2009</td>
+                                <td class="month-val">4</td>
+                                <td class="detail-val">うさぎ跳びでの通学を決意（1日で断念）</td>
+                            </tr>
+                            <tr class="font-serif">
+                                <td class="year-val">2012</td>
+                                <td class="month-val">10</td>
+                                <td class="detail-val">影踏み遊びで自身の影を置き去りにすることに成功</td>
+                            </tr>
+                            <tr class="font-serif">
+                                <td class="year-val">2015</td>
+                                <td class="month-val">4</td>
+                                <td class="detail-val">秘密結社「ニンジンは主食」結成</td>
+                            </tr>
+                            <tr class="font-serif">
+                                <td class="year-val">2018</td>
+                                <td class="month-val">6</td>
+                                <td class="detail-val">小学校飼育委員のウサギと熾烈な派閥争い</td>
+                            </tr>
+                            <tr class="font-serif">
+                                <td class="year-val">2021</td>
+                                <td class="month-val">4</td>
+                                <td class="detail-val">愛知県立犬山総合高校&nbsp;&nbsp;入学</td>
+                            </tr>
+                            <tr class="font-serif">
+                                <td class="year-val">2024</td>
+                                <td class="month-val">2</td>
+                                <td class="detail-val">愛知県立犬山総合高校&nbsp;&nbsp;卒業</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+
+                <!-- 履歴書 右半分 -->
+                <section class="resume-sheet sheet-right">
+                    <!-- 学歴・職歴テーブル（右） -->
+                    <table class="history-table history-right">
+                        <thead>
+                            <tr>
+                                <th class="year-col">年</th>
+                                <th class="month-col">月</th>
+                                <th class="detail-col">学&nbsp;&nbsp;&nbsp;&nbsp;歴&nbsp;&nbsp;&nbsp;&nbsp;・&nbsp;&nbsp;&nbsp;&nbsp;職&nbsp;&nbsp;&nbsp;&nbsp;歴&nbsp;&nbsp;（各別にまとめて書く）</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="font-serif">
+                                <td class="year-val">2024</td>
+                                <td class="month-val">4</td>
+                                <td class="detail-val">名古屋デザイン＆テクノロジー専門学校&nbsp;&nbsp;入学</td>
+                            </tr>
+                            <tr><td class="year-val"></td><td class="month-val"></td><td class="detail-val"></td></tr>
+                            <tr><td class="year-val"></td><td class="month-val"></td><td class="detail-val"></td></tr>
+                            <tr><td class="year-val"></td><td class="month-val"></td><td class="detail-val"></td></tr>
+                            <tr><td class="year-val"></td><td class="month-val"></td><td class="detail-val"></td></tr>
+                            <tr><td class="year-val"></td><td class="month-val"></td><td class="detail-val"></td></tr>
+                        </tbody>
+                    </table>
+
+                    <!-- 資格・免許テーブル -->
+                    <table class="license-table">
+                        <thead>
+                            <tr>
+                                <th class="year-col">年</th>
+                                <th class="month-col">月</th>
+                                <th class="detail-col">資&nbsp;&nbsp;&nbsp;&nbsp;格&nbsp;&nbsp;&nbsp;&nbsp;・&nbsp;&nbsp;&nbsp;&nbsp;免&nbsp;&nbsp;&nbsp;&nbsp;許</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="font-serif">
+                                <td class="year-val">2010</td>
+                                <td class="month-val">3</td>
+                                <td class="detail-val">うさぎ語通訳スペシャリスト</td>
+                            </tr>
+                            <tr class="font-serif">
+                                <td class="year-val">2018</td>
+                                <td class="month-val">6</td>
+                                <td class="detail-val">ニンジン皮むきスピードマスター</td>
+                            </tr>
+                            <tr><td class="year-val"></td><td class="month-val"></td><td class="detail-val"></td></tr>
+                            <tr><td class="year-val"></td><td class="month-val"></td><td class="detail-val"></td></tr>
+                            <tr><td class="year-val"></td><td class="month-val"></td><td class="detail-val"></td></tr>
+                            <tr><td class="year-val"></td><td class="month-val"></td><td class="detail-val"></td></tr>
+                            <tr><td class="year-val"></td><td class="month-val"></td><td class="detail-val"></td></tr>
+                        </tbody>
+                    </table>
+
+                    <!-- 志望動機・通勤時間・扶養家族・配偶者 一体型テーブル -->
+                    <table class="meta-info-table">
+                        <tr>
+                            <td class="motivation-col" rowspan="6">
+                                <div class="meta-label">志望の動機、特技、好きな学科、アピールポイントなど</div>
+                                <div class="motivation-content font-serif">
+                                    宇宙規模のスケールで物事を考え、<br>
+                                    佐（たす）け合いの精神でチームを支え、<br>
+                                    美しいコードとデザインを追求し、<br>
+                                    萌え上がるエンジニア魂で新時代を切り拓きます。
+                                </div>
+                            </td>
+                            <td class="side-label-col" colspan="2">通勤時間</td>
+                        </tr>
+                        <tr>
+                            <td class="side-content-col font-serif" colspan="2">
+                                うさぎ跳びで約&nbsp;&nbsp;180&nbsp;&nbsp;時間
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="side-label-col" colspan="2">扶養家族数（配偶者を除く）</td>
+                        </tr>
+                        <tr>
+                            <td class="side-content-col font-serif" colspan="2">
+                                <a href="https://www.worldometers.info/ja/%E4%B8%96%E7%95%8C%E4%BA%BA%E5%8F%A3/" target="_blank" rel="noopener noreferrer" class="population-link">
+                                    <span class="live-population-counter">8,300,711,056</span>
+                                </a>&nbsp;&nbsp;人
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="spouse-label-col">配偶者</td>
+                            <td class="spouse-label-col">配偶者の扶養義務</td>
+                        </tr>
+                        <tr>
+                            <td class="spouse-content-col font-serif">
+                                <span class="circle-wrap">
+                                    ※<span class="circle-item active">宇</span>・<span class="circle-item">佐</span>
+                                </span>
+                            </td>
+                            <td class="spouse-content-col font-serif">
+                                <span class="circle-wrap">
+                                    ※<span class="circle-item">美</span>・<span class="circle-item active">萌</span>
+                                </span>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <!-- 本人希望記入欄テーブル -->
+                    <table class="wishes-table">
+                        <thead>
+                            <tr>
+                                <td class="wishes-label-col">
+                                    本人希望記入欄（特に給料・職種・勤務時間・勤務地・その他について希望があれば記入）
+                                </td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="font-serif">
+                                <td class="wishes-val">給与はニンジン（現物支給）でも可</td>
+                            </tr>
+                            <tr class="font-serif">
+                                <td class="wishes-val">社員用PCの壁紙をすべてうさぎにすること</td>
+                            </tr>
+                            <tr><td class="wishes-val"></td></tr>
+                            <tr><td class="wishes-val"></td></tr>
+                            <tr><td class="wishes-val"></td></tr>
+                        </tbody>
+                    </table>
+
+                    <!-- 記入上の注意 -->
+                    <div class="note-section">
+                        <span class="note-title">記入上の注意</span>
+                        <div class="note-body">
+                            1. 鉛筆以外の黒又は青の筆記具で記入。&nbsp;&nbsp;&nbsp;&nbsp;2. 数字はアラビア数字で、文字はくずさず正確に書く。&nbsp;&nbsp;&nbsp;&nbsp;3. ※印のところは、該当するものを○で囲む。&nbsp;&nbsp;&nbsp;&nbsp;4. すべてがランダムの履歴書になります。
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- 5人目：剛田 武志 -->
+            <div class="resume-container">
+                <!-- 履歴書 左半分 -->
+                <section class="resume-sheet sheet-left">
+                    <div class="sheet-header">
+                        <h2 class="title-resume">履 歴 書</h2>
+                        <div class="current-date">平成&nbsp;&nbsp;&nbsp;&nbsp;年&nbsp;&nbsp;&nbsp;&nbsp;月&nbsp;&nbsp;&nbsp;&nbsp;日現在</div>
+                    </div>
+
+                    <!-- プロフィール・基本情報ブロック -->
+                    <div class="profile-block">
+                        <table class="info-table">
+                            <tr>
+                                <td class="label-col ruby-label">ふりがな</td>
+                                <td class="content-col font-serif ruby-text" colspan="2">ごうだ&nbsp;&nbsp;たけし</td>
+                            </tr>
+                            <tr>
+                                <td class="label-col name-label">氏&nbsp;&nbsp;&nbsp;&nbsp;名</td>
+                                <td class="content-col font-serif name-text" colspan="2">
+                                    <a href="https://kanji.jitenon.jp/kanji/466" target="_blank" rel="noopener noreferrer" class="name-kanji-link">剛</a>
+                                    <a href="https://kanji.jitenon.jp/kanji/062" target="_blank" rel="noopener noreferrer" class="name-kanji-link">田</a>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <a href="https://kanji.jitenon.jp/kanji/184" target="_blank" rel="noopener noreferrer" class="name-kanji-link">武</a>
+                                    <a href="https://kanji.jitenon.jp/kanji/381" target="_blank" rel="noopener noreferrer" class="name-kanji-link">志</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="content-col font-serif birth-text" colspan="2">
+                                    1995&nbsp;&nbsp;年&nbsp;&nbsp;6&nbsp;&nbsp;月&nbsp;&nbsp;15&nbsp;&nbsp;日生&nbsp;&nbsp;（満&nbsp;&nbsp;30&nbsp;&nbsp;歳）
+                                </td>
+                                <td class="gender-col label-col">
+                                    <div class="gender-wrap">
+                                        <div class="gender-note">※</div>
+                                        <div class="gender-options">
+                                            <span class="gender-item active">男</span>・<span class="gender-item">女</span>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+
+                        <!-- 写真貼付枠 -->
+                        <div class="photo-box" data-gender="men">
+                            <div class="photo-text">
+                                写真をはる位置<br>
+                                <span class="photo-subtext">
+                                    写真をはる必要がある場合<br>
+                                    1. 縦&nbsp;&nbsp;36～40mm<br>
+                                    &nbsp;&nbsp;&nbsp;横&nbsp;&nbsp;24～30mm<br>
+                                    2. 本人単身胸から上<br>
+                                    3. 裏面のりづけ
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 住所・連絡先テーブル -->
+                    <table class="address-table">
+                        <tr>
+                            <td class="label-col ruby-label">ふりがな</td>
+                            <td class="content-col font-serif ruby-text">ごうだたけしのあきち</td>
+                            <td class="tel-label label-col">電話</td>
+                        </tr>
+                        <tr class="row-address">
+                            <td class="label-col">現&nbsp;&nbsp;住&nbsp;&nbsp;所</td>
+                            <td class="content-col font-serif address-text">
+                                <span class="postal-code">〒 19950615</span>
+                                <div class="address-detail">剛田武志の空き地</div>
+                            </td>
+                            <td class="tel-content font-serif tel-text">
+                                剛田武志のマイク
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="label-col ruby-label">ふりがな</td>
+                            <td class="content-col font-serif ruby-text"></td>
+                            <td class="tel-label label-col">電話</td>
+                        </tr>
+                        <tr class="row-address">
+                            <td class="label-col">連&nbsp;&nbsp;絡&nbsp;&nbsp;先</td>
+                            <td class="content-col font-serif address-text contact-text">
+                                <span class="postal-code">〒</span>
+                                <span class="contact-subtext">（現住所場所を希望する場合のみ記入）</span>
+                            </td>
+                            <td class="tel-content font-serif tel-text"></td>
+                        </tr>
+                    </table>
+
+                    <!-- 学歴・職歴テーブル（左） -->
+                    <table class="history-table history-left">
+                        <thead>
+                            <tr>
+                                <th class="year-col">年</th>
+                                <th class="month-col">月</th>
+                                <th class="detail-col">学&nbsp;&nbsp;&nbsp;&nbsp;歴&nbsp;&nbsp;&nbsp;&nbsp;・&nbsp;&nbsp;&nbsp;&nbsp;職&nbsp;&nbsp;&nbsp;&nbsp;歴&nbsp;&nbsp;（各別にまとめて書く）</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="font-serif">
+                                <td class="year-val">1995</td>
+                                <td class="month-val">6</td>
+                                <td class="detail-val">地響きとともに誕生</td>
+                            </tr>
+                            <tr class="font-serif">
+                                <td class="year-val">1998</td>
+                                <td class="month-val">4</td>
+                                <td class="detail-val">自分の歌声で近所の窓ガラスをすべて粉砕</td>
+                            </tr>
+                            <tr class="font-serif">
+                                <td class="year-val">2002</td>
+                                <td class="month-val">8</td>
+                                <td class="detail-val">空き地の土管の上にリサイタル用ステージを無許可で設営</td>
+                            </tr>
+                            <tr class="font-serif">
+                                <td class="year-val">2005</td>
+                                <td class="month-val">10</td>
+                                <td class="detail-val">「お前のものは俺のもの」の哲学を提唱</td>
+                            </tr>
+                            <tr class="font-serif">
+                                <td class="year-val">2010</td>
+                                <td class="month-val">4</td>
+                                <td class="detail-val">のび太くんからマンガ本を無期限で借りる事業を開始</td>
+                            </tr>
+                            <tr class="font-serif">
+                                <td class="year-val">2015</td>
+                                <td class="month-val">4</td>
+                                <td class="detail-val">ジャイアンシチューの開発に着手（保健所から警告）</td>
+                            </tr>
+                            <tr class="font-serif">
+                                <td class="year-val">2018</td>
+                                <td class="month-val">4</td>
+                                <td class="detail-val">ボイストレーニングに通うも、講師が気絶し退学</td>
+                            </tr>
+                            <tr class="font-serif">
+                                <td class="year-val">2021</td>
+                                <td class="month-val">4</td>
+                                <td class="detail-val">映画版になると突然いいやつになる現象を研究開始</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+
+                <!-- 履歴書 右半分 -->
+                <section class="resume-sheet sheet-right">
+                    <!-- 学歴・職歴テーブル（右） -->
+                    <table class="history-table history-right">
+                        <thead>
+                            <tr>
+                                <th class="year-col">年</th>
+                                <th class="month-col">月</th>
+                                <th class="detail-col">学&nbsp;&nbsp;&nbsp;&nbsp;歴&nbsp;&nbsp;&nbsp;&nbsp;・&nbsp;&nbsp;&nbsp;&nbsp;職&nbsp;&nbsp;&nbsp;&nbsp;歴&nbsp;&nbsp;（各別にまとめて書く）</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="font-serif">
+                                <td class="year-val">2024</td>
+                                <td class="month-val">4</td>
+                                <td class="detail-val">名古屋デザイン＆テクノロジー専門学校&nbsp;&nbsp;入学</td>
+                            </tr>
+                            <tr><td class="year-val"></td><td class="month-val"></td><td class="detail-val"></td></tr>
+                            <tr><td class="year-val"></td><td class="month-val"></td><td class="detail-val"></td></tr>
+                            <tr><td class="year-val"></td><td class="month-val"></td><td class="detail-val"></td></tr>
+                            <tr><td class="year-val"></td><td class="month-val"></td><td class="detail-val"></td></tr>
+                            <tr><td class="year-val"></td><td class="month-val"></td><td class="detail-val"></td></tr>
+                        </tbody>
+                    </table>
+
+                    <!-- 資格・免許テーブル -->
+                    <table class="license-table">
+                        <thead>
+                            <tr>
+                                <th class="year-col">年</th>
+                                <th class="month-col">月</th>
+                                <th class="detail-col">資&nbsp;&nbsp;&nbsp;&nbsp;格&nbsp;&nbsp;&nbsp;&nbsp;・&nbsp;&nbsp;&nbsp;&nbsp;免&nbsp;&nbsp;&nbsp;&nbsp;許</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="font-serif">
+                                <td class="year-val">2003</td>
+                                <td class="month-val">5</td>
+                                <td class="detail-val">空き地リサイタル主催者第一種免許</td>
+                            </tr>
+                            <tr class="font-serif">
+                                <td class="year-val">2015</td>
+                                <td class="month-val">10</td>
+                                <td class="detail-val">ジャイアンシチュー調理師（自称）</td>
+                            </tr>
+                            <tr><td class="year-val"></td><td class="month-val"></td><td class="detail-val"></td></tr>
+                            <tr><td class="year-val"></td><td class="month-val"></td><td class="detail-val"></td></tr>
+                            <tr><td class="year-val"></td><td class="month-val"></td><td class="detail-val"></td></tr>
+                            <tr><td class="year-val"></td><td class="month-val"></td><td class="detail-val"></td></tr>
+                            <tr><td class="year-val"></td><td class="month-val"></td><td class="detail-val"></td></tr>
+                        </tbody>
+                    </table>
+
+                    <!-- 志望動機・通勤時間・扶養家族・配偶者 一体型テーブル -->
+                    <table class="meta-info-table">
+                        <tr>
+                            <td class="motivation-col" rowspan="6">
+                                <div class="meta-label">志望の動機、特技、好きな学科、アピールポイントなど</div>
+                                <div class="motivation-content font-serif">
+                                    剛健な肉体と精神でいかなる困難も突破し、<br>
+                                    田畑を耕すような地道な努力を惜しまず、<br>
+                                    武士の如き誇りを持って誠実に仕事と向き合い、<br>
+                                    志高く、御社の発展と世界征服へ貢献します。
+                                </div>
+                            </td>
+                            <td class="side-label-col" colspan="2">通勤時間</td>
+                        </tr>
+                        <tr>
+                            <td class="side-content-col font-serif" colspan="2">
+                                徒歩約&nbsp;&nbsp;10&nbsp;&nbsp;分（のび太の自転車を借りた場合）
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="side-label-col" colspan="2">扶養家族数（配偶者を除く）</td>
+                        </tr>
+                        <tr>
+                            <td class="side-content-col font-serif" colspan="2">
+                                <a href="https://www.worldometers.info/ja/%E4%B8%96%E7%95%8C%E4%BA%BA%E5%8F%A3/" target="_blank" rel="noopener noreferrer" class="population-link">
+                                    <span class="live-population-counter">8,300,711,056</span>
+                                </a>&nbsp;&nbsp;人
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="spouse-label-col">配偶者</td>
+                            <td class="spouse-label-col">配偶者の扶養義務</td>
+                        </tr>
+                        <tr>
+                            <td class="spouse-content-col font-serif">
+                                <span class="circle-wrap">
+                                    ※<span class="circle-item active">剛</span>・<span class="circle-item">田</span>
+                                </span>
+                            </td>
+                            <td class="spouse-content-col font-serif">
+                                <span class="circle-wrap">
+                                    ※<span class="circle-item">武</span>・<span class="circle-item active">志</span>
+                                </span>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <!-- 本人希望記入欄テーブル -->
+                    <table class="wishes-table">
+                        <thead>
+                            <tr>
+                                <td class="wishes-label-col">
+                                    本人希望記入欄（特に給料・職種・勤務時間・勤務地・その他について希望があれば記入）
+                                </td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="font-serif">
+                                <td class="wishes-val">毎週水曜日に社内全体で私のリサイタルを開催すること</td>
+                            </tr>
+                            <tr class="font-serif">
+                                <td class="wishes-val">社長室を私の控室として提供すること</td>
+                            </tr>
+                            <tr><td class="wishes-val"></td></tr>
+                            <tr><td class="wishes-val"></td></tr>
+                            <tr><td class="wishes-val"></td></tr>
+                        </tbody>
+                    </table>
+
+                    <!-- 記入上の注意 -->
+                    <div class="note-section">
+                        <span class="note-title">記入上の注意</span>
+                        <div class="note-body">
+                            1. 鉛筆以外の黒又は青の筆記具で記入。&nbsp;&nbsp;&nbsp;&nbsp;2. 数字はアラビア数字で、文字はくずさず正確に書く。&nbsp;&nbsp;&nbsp;&nbsp;3. ※印のところは、該当するものを○で囲む。&nbsp;&nbsp;&nbsp;&nbsp;4. すべてがランダムの履歴書になります。
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+        </main>
+    </div>
+
+    <!-- リアルタイム世界人口カウンター & ランダム証明写真の制御スクリプト -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // --- 1. 世界人口カウンターの制御 (全履歴書に適用) ---
+            const basePopulation = 8260000000;
+            const baseDate = new Date("2026-01-01T00:00:00Z").getTime();
+            const growthPerMillisecond = 2.347 / 1000; 
+
+            const countElements = document.querySelectorAll(".live-population-counter");
+
+            function updatePopulation() {
+                const now = new Date().getTime();
+                const elapsed = now - baseDate;
+                const currentPopulation = Math.floor(basePopulation + (elapsed * growthPerMillisecond));
+                
+                countElements.forEach((countElement) => {
+                    countElement.textContent = currentPopulation.toLocaleString();
+                });
+            }
+
+            updatePopulation();
+            setInterval(updatePopulation, 100);
+
+            // --- 2. 2回に1回ランダムで動的に顔写真を貼る機能 (全5枚の履歴書に適用) ---
+            const photoBoxes = document.querySelectorAll(".photo-box");
+            
+            photoBoxes.forEach((photoBox) => {
+                const placeholderText = photoBox.querySelector(".photo-text");
+                const gender = photoBox.getAttribute("data-gender") || "men"; 
+                
+                if (placeholderText) {
+                    if (Math.random() < 0.5) {
+                        placeholderText.style.display = "none";
+                        photoBox.style.padding = "0"; // 画像表示時はパディングをなくして枠いっぱいに貼る
+                        const img = document.createElement("img");
+                        
+                        // 性別に応じたランダム写真をロード
+                        let randomId;
+                        if (gender === "lego") {
+                            randomId = Math.floor(Math.random() * 10); // legoは0〜9
+                            img.src = `https://randomuser.me/api/portraits/lego/${randomId}.jpg`;
+                        } else if (gender === "women") {
+                            randomId = Math.floor(Math.random() * 100);
+                            img.src = `https://randomuser.me/api/portraits/women/${randomId}.jpg`;
+                        } else {
+                            randomId = Math.floor(Math.random() * 100);
+                            img.src = `https://randomuser.me/api/portraits/men/${randomId}.jpg`;
+                        }
+                        
+                        img.alt = "証明写真";
+                        img.style.width = "100%";
+                        img.style.height = "100%";
+                        img.style.objectFit = "cover";
+                        photoBox.appendChild(img);
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
